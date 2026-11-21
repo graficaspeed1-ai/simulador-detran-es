@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulado Teórico – DETRAN|ES</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff;--tx:#222;--mut:#555;--pri:#0b4f9c;--btn:#1b4a5e;--bd:#cfd8e3;--box:#f3f7e6;--bb:#c5d89a;--bl:#1565c0;--rd:#d32f2f;--ok:#2e9e44;--wn:#f0b400;--sel:#e1ebd3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14191f;--tx:#e6ebf0;--mut:#a5b3c0;--pri:#5a9be6;--btn:#2f7391;--bd:#33445a;--box:#1f2a1d;--bb:#4b6340;--bl:#2b7de0;--rd:#e0524f;--sel:#2a3a28}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#14191f;--tx:#e6ebf0;--mut:#a5b3c0;--pri:#5a9be6;--btn:#2f7391;--bd:#33445a;--box:#1f2a1d;--bb:#4b6340;--bl:#2b7de0;--rd:#e0524f;--sel:#2a3a28}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 Arial,Helvetica,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:14px 16px 40px}
+.logo{font-size:40px;font-weight:700;letter-spacing:1px;padding:14px 0 6px;border-bottom:1px solid var(--bd);margin-bottom:16px}.logo span{color:var(--pri);font-weight:400;margin:0 6px}
+h1{font-size:26px;font-weight:400;margin:14px 0}
+.md{display:grid;gap:10px}.md button{text-align:left;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-left:5px solid var(--pri);border-radius:4px;padding:14px;font:inherit;cursor:pointer}
+.md b{display:block;color:var(--pri);font-size:18px}.md span{color:var(--mut);font-size:14px}
+button.b{background:var(--btn);color:#fff;border:0;border-radius:6px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer}
+button.g{background:var(--bg);color:var(--tx);border:1px solid var(--bd);font-weight:400;border-radius:3px;padding:7px 12px}
+button:disabled{opacity:.4;cursor:default}button:focus-visible,input:focus-visible,.op:focus-visible{outline:3px solid #ffb300;outline-offset:2px}
+input{width:100%;padding:10px;font:inherit;border:1px solid var(--bd);border-radius:4px;background:var(--bg);color:var(--tx);margin:6px 0 14px}
+.tm{font-weight:700;margin:10px 0 6px}.pbw{height:8px;margin-bottom:12px}.pbw div{height:100%;background:var(--bl);transition:width 1s linear}
+.gb{background:var(--box);border:1px solid var(--bb);padding:8px;margin-bottom:6px}
+.g20{display:grid;grid-template-columns:repeat(auto-fill,minmax(30px,1fr));gap:5px}
+.cell{height:28px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:13px;cursor:pointer;border-radius:2px}
+.cell.a{background:var(--ok);color:#fff;border-color:var(--ok)}.cell.w{background:var(--wn);color:#000;border-color:var(--wn)}
+.cell.ok{background:var(--bl);color:#fff;border-color:var(--bl)}.cell.bad{background:var(--rd);color:#fff;border-color:var(--rd)}
+.cell.c{outline:2px solid var(--pri);outline-offset:1px;font-weight:700}
+.lg{font-size:13px;margin-top:8px}.lg i{display:inline-block;width:10px;height:10px;margin:0 4px 0 8px;vertical-align:middle}.lg i:first-child{margin-left:0}
+.row{display:flex;justify-content:space-between;gap:8px;margin:10px 0;align-items:center;flex-wrap:wrap}
+.ln{display:flex;justify-content:space-between;font-size:13px;margin-top:10px}
+.q{font-weight:700;font-size:17px;margin:14px 0 8px}.sg{text-align:center;margin:8px 0}.sg svg{width:96px;height:96px}
+.ob{background:var(--box);border:1px solid var(--bb);padding:8px;margin:12px 0}
+.op{display:flex;gap:10px;align-items:center;padding:9px 10px;cursor:pointer;border-radius:3px;margin:2px 0}.op b{width:22px}.op svg{width:64px;height:64px}
+.op:hover{background:var(--sel)}.op.ok{background:var(--bl);color:#fff}.op.bad{background:var(--rd);color:#fff}
+.rs{font-weight:700;margin:6px 0}.res{text-align:center}.res .n{font-size:46px;font-weight:700;color:var(--pri)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid var(--bd);padding:7px;text-align:left}
+ul{padding-left:20px}li{margin:4px 0}
+body{background:#2d6296}.wrap{max-width:860px;padding:0 0 30px;margin:0 auto}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:linear-gradient(#d9ecf8,#8fc3e6);margin-bottom:16px}
+.lgo{background:#fff;border-radius:6px;padding:4px 10px;font-weight:700;color:#0b4f9c;line-height:1.1;border-bottom:4px solid #3aa655}.lgo small{display:block;font-size:11px;color:#2f8f47}
+.pill{background:#fff;border-radius:5px;padding:5px 14px;font-size:13px;font-weight:700;color:#222}.pill:empty{display:none}
+#app{margin:0 14px}#app.pg{background:#fff;color:#222;border-radius:6px;padding:16px}
+.qc{background:#fff;color:#111;border:3px solid #cfe6f5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;min-height:110px}
+.qt{font-weight:700;font-size:15px}.qc .sg{margin:0;flex:none}
+.bt{display:grid;grid-template-columns:1fr 190px;border:3px solid #cfe6f5;border-top:0;background:#cfe8f7;color:#123}
+@media(max-width:620px){.bt{grid-template-columns:1fr}.sd{border-left:0!important}}
+.hd{padding:8px 12px;font-size:13px;border-bottom:1px solid #8fb9d6}
+.ro{display:flex;align-items:center;gap:12px;padding:9px 12px;border-bottom:1px solid #a9cbe2;cursor:pointer;font-size:14px}
+.ro:hover{background:#e3f1fa}.nb{flex:none;width:44px;height:28px;display:grid;place-items:center;background:linear-gradient(#fff,#dfe7ee);border:1px solid #89a;border-radius:4px;font-weight:700;color:#123}
+.ro.on{background:#fff}.ro.on .nb{background:#1b3fa0;color:#fff}
+.ro.ok{background:var(--bl);color:#fff}.ro.bad{background:var(--rd);color:#fff}
+.ro .tx svg{width:56px;height:56px;display:block}
+.sd{padding:12px;font-size:13px;border-left:3px solid #8fb9d6;display:flex;flex-direction:column;gap:8px;text-align:center}
+.sd button{border:1px solid #6a8;border-radius:4px;padding:9px;font:inherit;font-weight:700;cursor:pointer}
+.cf{background:linear-gradient(#b9ef6a,#6fc22e);color:#123}.pl{background:linear-gradient(#ffe66b,#e9b800);color:#123}.sd button:disabled{opacity:.5;cursor:default}
+body{background:#213752}
+.bar{background:linear-gradient(#cfd9e6,#86a3cb)}
+.lgo{background:linear-gradient(#b4dd7c,#5fa030);border:1px solid #3b7a1f;color:#222;text-align:center;font-size:17px;font-weight:400;padding:3px 16px;border-radius:6px;line-height:1.15}.lgo b{display:block;font-size:19px;color:#444}.lgo small{color:#244;font-size:10px;border:0}
+.lg2{width:min(520px,100%);background:linear-gradient(#a9bfdf,#8aa6cf 44px,#93add3);margin:24px auto 0;padding:0 0 12px;color:#222}
+.lh{display:flex;align-items:center;gap:10px;padding:8px 14px;font:italic 700 20px Arial,sans-serif;letter-spacing:2px;color:#2b3a4f}
+.lf{background:#c9daf0;margin:0 26px;padding:18px 14px;display:grid;grid-template-columns:90px 1fr;gap:14px;align-items:center}
+.lf label{text-align:right;font-size:14px}.lf input,.lf select{margin:0;max-width:240px;padding:7px;border:1px solid #666;border-radius:2px;background:#fff;color:#111;font:inherit}.lf input[type=checkbox]{width:auto;margin-right:6px}
+.ac{grid-column:2;max-width:240px;background:linear-gradient(#b3c3da,#6d8cb5);border:1px solid #3b5a85;border-radius:6px;color:#223;font:700 18px Arial,sans-serif;letter-spacing:2px;padding:14px;cursor:pointer}
+.er{color:#0a0a8c;font-weight:700;font-size:18px;letter-spacing:1px;text-align:center;margin:12px 0 4px;min-height:24px}
+button,.ro,.cell{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.ro{min-height:48px}.sd button,button.b{min-height:44px}
+@media(max-width:620px){.qc{flex-direction:column;text-align:center}.lf{grid-template-columns:1fr;margin:0 12px}.lf label{text-align:left}.ac{grid-column:1;max-width:none}.lf input,.lf select{max-width:none}.bar{flex-wrap:wrap}}
+@media(min-width:768px){body{font-size:17px}.qt{font-size:18px}.ro{font-size:16px;padding:12px}.sd{font-size:15px}.wrap{max-width:980px}}
+.ce{border:3px double #0b4f9c;padding:24px;text-align:center;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="bar"><div class="lgo">Simulador<b>Digital</b><small>DETRAN|ES</small></div><div class="pill" id="cnt"></div><div class="pill" id="tmr"></div></div><div class="wrap"><div id="app"></div></div>
+<script>
+const Q=[
+["Em cruzamento não sinalizado, tem preferência o veículo que vem:","pela direita do condutor","pela esquerda do condutor","em maior velocidade","com maior porte"],
+["A placa de parada obrigatória (R-1) tem formato:","octogonal","triangular","losango","retangular"],
+["Na ausência de sinalização, a velocidade máxima em via urbana local é de:","30 km/h","40 km/h","50 km/h","60 km/h"],
+["Dirigir sob influência de álcool é infração:","gravíssima","leve","média","grave"],
+["Uma infração de natureza grave soma quantos pontos na CNH?","5 pontos","3 pontos","4 pontos","7 pontos"],
+["Em túneis com iluminação pública, o condutor deve manter acesa a luz:","baixa","alta","de neblina","somente a de posição"],
+["É permitido ultrapassar pela direita quando:","o veículo da frente indicar que vai virar à esquerda","a pista da esquerda estiver lenta","houver pressa","o veículo da frente estiver parado no semáforo verde"],
+["Ao ser ultrapassado, o condutor deve:","manter-se à direita e não aumentar a velocidade","acelerar para impedir a ultrapassagem","mudar para a faixa da esquerda","frear bruscamente"],
+["Em faixa de pedestres sem semáforo, o condutor deve:","dar passagem ao pedestre que está atravessando","buzinar para alertar o pedestre","acelerar para passar antes","passar se não houver outros veículos"],
+["A luz amarela intermitente do semáforo indica:","atenção, devendo o condutor redobrar o cuidado","parada obrigatória","passagem livre sem cuidados","proibição de virar"],
+["A categoria B habilita a conduzir veículos de até:","3.500 kg de PBT e 8 lugares, exceto o do condutor","5.000 kg de PBT","10 lugares, incluindo o do condutor","6.000 kg de PBT"],
+["A Permissão para Dirigir (PPD) tem validade de:","1 ano","6 meses","2 anos","5 anos"],
+["A linha dupla contínua amarela no centro da pista indica:","proibição de ultrapassagem nos dois sentidos","permissão de ultrapassagem","início de pista dupla","faixa exclusiva de ônibus"],
+["Crianças menores de 10 anos devem ser transportadas:","no banco traseiro, com dispositivo de retenção adequado","no banco da frente, no colo do adulto","no banco da frente, sem cinto","em qualquer lugar do veículo"],
+["É proibido estacionar a menos de quantos metros do alinhamento da via transversal?","5 metros","2 metros","10 metros","15 metros"],
+["Ao perceber aquaplanagem, o condutor deve:","tirar o pé do acelerador gradualmente e segurar firme o volante","frear bruscamente","acelerar para sair da água","girar o volante para os lados"],
+["Em acidente com vítimas, a primeira providência é:","sinalizar o local e acionar o socorro","remover a vítima imediatamente","oferecer água à vítima","deixar o local rapidamente"],
+["O número de telefone do SAMU é:","192","190","193","199"],
+["Fumaça preta saindo do escapamento indica:","combustão incompleta, com necessidade de regulagem do motor","motor em perfeito estado","excesso de água no radiador","pneus desgastados"],
+["Em rotatória sem sinalização, tem preferência quem:","já está circulando por ela","vai entrar nela","vem pela direita","tem maior veículo"],
+["As placas de advertência têm, em regra, formato:","losango, com fundo amarelo","circular, com fundo azul","octogonal, com fundo vermelho","retangular, com fundo verde"],
+["As placas de regulamentação têm, em geral, forma:","circular, com borda vermelha","triangular, com borda preta","quadrada, com fundo amarelo","octogonal, com borda azul"],
+["Para conduzir ciclomotor, exige-se habilitação na categoria:","ACC","A","B","D"],
+["Em rodovia de pista simples, a velocidade máxima para automóveis, sem sinalização, é de:","100 km/h","80 km/h","110 km/h","120 km/h"],
+["Manter distância segura do veículo da frente depende:","da velocidade, das condições da pista e do veículo","apenas do tamanho do veículo","apenas da cor do veículo","somente do horário"],
+["O pisca-alerta deve ser usado:","quando o veículo estiver imobilizado em emergência ou situação de perigo","para agradecer outro condutor","para estacionar em local proibido","em chuva leve, em movimento"],
+["Para conduzir, o condutor deve portar:","a CNH e o documento de licenciamento do veículo","somente o CPF","apenas o seguro do veículo","somente o título de eleitor"],
+["O capacete é obrigatório para:","condutor e passageiro de motocicleta","apenas o condutor, fora da cidade","somente em rodovias","apenas à noite"],
+["O cinto de segurança é obrigatório para:","condutor e todos os passageiros, em todas as vias","apenas o condutor","somente em rodovias","apenas os bancos da frente, na cidade"],
+["Ao se aproximar de veículo de emergência com sirene e luz acesas, o condutor deve:","encostar à direita e parar, dando passagem","acelerar e seguir à frente","manter a faixa e a velocidade","parar no meio da pista"],
+["A buzina deve ser usada:","apenas em breves toques para advertir e evitar perigo","para cumprimentar conhecidos","para apressar o veículo da frente","de forma prolongada em áreas residenciais"],
+["Ao cruzar uma linha férrea sem sinalização, o condutor deve:","reduzir a velocidade e dar preferência ao trem","acelerar para atravessar antes do trem","buzinar e atravessar sem parar","seguir o veículo da frente sem olhar"],
+["Ao ultrapassar um ciclista, a distância lateral mínima é de:","1,5 metro","0,5 metro","1 metro","3 metros"],
+["A ultrapassagem é proibida:","em curvas e aclives sem visibilidade","em retas com boa visibilidade","em pista dupla com linha tracejada","durante o dia"],
+["Em descidas longas, o condutor deve:","usar marcha reduzida para auxiliar a frenagem","engatar o ponto morto","desligar o motor","frear continuamente"],
+["A sigla CNH significa:","Carteira Nacional de Habilitação","Código Nacional de Habilitação","Certificado Nacional de Habilitação","Carteira Nacional de Honra"],
+["O condutor deve trocar o farol alto pelo baixo quando:","houver veículo vindo em sentido contrário","estiver em via bem iluminada e vazia","estiver estacionado","for ultrapassar sozinho na rodovia"],
+["A sinalização horizontal é aquela:","pintada ou aplicada sobre o pavimento","colocada em placas laterais","feita por semáforos","feita por agentes de trânsito"],
+["O braço levantado do agente de trânsito significa:","parada obrigatória para todos os veículos","siga em frente","diminua a velocidade","vire à direita"],
+["Em pista com várias faixas no mesmo sentido, a faixa da esquerda é destinada:","à ultrapassagem e aos veículos de maior velocidade","aos veículos mais lentos","somente a caminhões","ao estacionamento"],
+["Pela Lei Seca, o condutor que dirige após ingerir bebida alcoólica:","pode ser penalizado mesmo com pequena quantidade de álcool","só é penalizado se estiver cambaleando","nunca é penalizado se beber pouco","só é penalizado à noite"],
+["Em regra, a suspensão do direito de dirigir por pontos ocorre ao atingir:","20 pontos em 12 meses, sem infração gravíssima","10 pontos em 12 meses","15 pontos em 6 meses","50 pontos em 12 meses"],
+["Em rodovias fora das áreas urbanas, o farol baixo deve ficar aceso:","durante o dia e a noite","somente à noite","somente na chuva","somente em túneis"],
+["O triângulo de sinalização serve para:","advertir os outros condutores sobre veículo parado na pista","identificar veículo de autoescola","indicar velocidade máxima","marcar vaga de estacionamento"],
+["Ao dirigir com sono ou cansaço, o condutor deve:","parar em local seguro e descansar","abrir o vidro e continuar","aumentar o volume do som","acelerar para chegar logo"],
+["Na ausência de sinalização, a velocidade máxima em via arterial urbana é de:","60 km/h","40 km/h","30 km/h","80 km/h"],
+["Na ausência de sinalização, a velocidade máxima em via coletora é de:","40 km/h","30 km/h","60 km/h","80 km/h"],
+["Na ausência de sinalização, a velocidade máxima em via de trânsito rápido é de:","80 km/h","60 km/h","100 km/h","40 km/h"],
+["A placa R-2 (Dê a preferência) tem formato:","triangular, com um vértice para baixo","octogonal","circular azul","retangular vertical"],
+["As placas de indicação com fundo verde servem para:","orientar sobre destinos e direções","advertir sobre perigo","proibir estacionamento","indicar obras"],
+["O pedestre deve atravessar a via:","pela faixa de pedestres, quando houver","em qualquer ponto, correndo","pelo meio da pista","somente à noite"],
+["Em acidente sem vítimas, se possível, o condutor deve:","retirar os veículos da via para não obstruir o trânsito","deixar os veículos no local por horas","abandonar o local","discutir no meio da pista"],
+["A profundidade mínima dos sulcos da banda de rodagem dos pneus é de:","1,6 mm","0,5 mm","3 mm","5 mm"],
+["O aumento da velocidade provoca:","aumento da distância de frenagem","diminuição da distância de frenagem","melhor aderência dos pneus","redução do consumo de combustível"],
+["O óleo lubrificante usado deve ser:","entregue em local que faça o descarte adequado","jogado no esgoto","despejado no solo","queimado em terreno baldio"],
+["O condutor que sai de uma garagem para a via deve:","dar preferência aos veículos e pedestres que circulam","entrar rapidamente buzinando","ter preferência por estar saindo","parar no meio da calçada"],
+["A motocicleta deve circular com o farol aceso:","durante o dia e a noite","somente à noite","somente em rodovias","somente na chuva"],
+["A direção defensiva consiste em:","prever situações de risco e agir para evitá-las","dirigir sempre em alta velocidade","confiar que os outros erram menos","ignorar condições da via"],
+["Antes de mudar de faixa, o condutor deve:","sinalizar com antecedência e verificar o retrovisor","mudar rapidamente sem sinalizar","buzinar e mudar","frear bruscamente"],
+["A luz de temperatura do motor acesa em vermelho no painel indica:","superaquecimento do motor","pouco combustível","porta aberta","bateria carregada"],
+["A calibragem dos pneus deve seguir:","o manual do veículo, com os pneus frios","qualquer valor, desde que alto","a medida feita com pneus quentes após longa viagem","o desgaste da banda de rodagem"],
+["O sistema ABS tem a função de:","evitar o travamento das rodas na frenagem","aumentar a velocidade máxima","reduzir o consumo de combustível","aquecer os freios"],
+["A luz de óleo acesa no painel indica:","baixa pressão do óleo, devendo-se parar o motor","troca de pneus","faróis queimados","porta mal fechada"],
+["A bateria do veículo tem a função principal de:","alimentar o sistema elétrico e dar a partida","resfriar o motor","calibrar os pneus","filtrar o ar"],
+["O nível do fluido de freio deve ser verificado:","periodicamente, no reservatório","somente quando o freio falhar","a cada 10 anos","nunca"],
+["Amortecedores desgastados prejudicam:","a estabilidade e a frenagem do veículo","somente o conforto","apenas o ruído","apenas o consumo"],
+["O alinhamento e o balanceamento das rodas ajudam a:","reduzir o desgaste irregular dos pneus e as vibrações","aumentar a poluição","diminuir a aderência","aquecer o motor"]
+];
+const $=s=>document.querySelector(s),app=$('#app');
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const NM={l:'leve',m:'média',g:'grave',v:'gravíssima'},PT={l:3,m:4,g:5,v:7};
+// Placas: tipo|nome|símbolo  (R,X,E,B,N,O,S,D = regulamentação; A = advertência; I = indicação)
+const SG=`S|Parada obrigatória|PARE
+D|Dê a preferência|
+N|Sentido proibido|
+R|Velocidade máxima permitida|40
+R|Peso bruto total máximo permitido|6t
+R|Altura máxima permitida|3,5m
+R|Largura máxima permitida|2,1m
+X|Proibido virar à esquerda|↰
+X|Proibido virar à direita|↱
+X|Proibido retornar à esquerda|↶
+X|Proibido retornar à direita|↷
+X|Proibido ultrapassar|🚗🚗
+X|Proibido trânsito de bicicletas|🚲
+X|Proibido trânsito de pedestres|🚶
+X|Proibido trânsito de ônibus|🚌
+X|Proibido trânsito de caminhões|🚚
+X|Proibido trânsito de veículos automotores|🚗
+X|Proibido buzinar|📯
+E|Proibido estacionar|
+B|Proibido parar e estacionar|
+O|Siga em frente|↑
+O|Vire à esquerda|↰
+O|Vire à direita|↱
+O|Sentido de circulação na rotatória|↻
+O|Circulação exclusiva de bicicletas|🚲
+A|Curva acentuada à esquerda|↰
+A|Curva acentuada à direita|↱
+A|Cruzamento de vias|✚
+A|Interseção em círculo|↻
+A|Semáforo à frente|🚦
+A|Parada obrigatória à frente|PARE
+A|Passagem de nível sem barreira|✖
+A|Passagem de nível com barreira|🚧
+A|Pista escorregadia|🚗〰
+A|Saliência ou lombada|∩
+A|Depressão|∪
+A|Passagem sinalizada de pedestres|🚶
+A|Passagem sinalizada de escolares|🚸
+A|Animais selvagens|🦌
+A|Animais|🐄
+A|Passagem sinalizada de ciclistas|🚲
+A|Obras|👷
+A|Estreitamento de pista|⇥⇤
+A|Ponte estreita|🌉
+A|Altura limitada|↕
+A|Vento lateral|💨
+A|Trânsito de aeronaves|✈
+A|Declive acentuado|↘
+A|Aclive acentuado|↗
+I|Hospital|H
+I|Estacionamento|E
+I|Posto de abastecimento|⛽
+I|Telefone|📞
+I|Restaurante|🍴
+I|Hotel|🛏`.split('\n').map(l=>l.split('|'));
+// Infrações: descrição|natureza (l leve, m média, g grave, v gravíssima)
+const IN=`Dirigir sob influência de álcool|v
+Recusar-se a fazer o teste do bafômetro|v
+Avançar o sinal vermelho do semáforo|v
+Participar de corrida não autorizada em via pública (racha)|v
+Dirigir sem possuir CNH|v
+Deixar de prestar socorro à vítima de acidente|v
+Transportar criança sem dispositivo de retenção adequado|v
+Ultrapassar pela contramão em linha dupla contínua|v
+Conduzir motocicleta sem usar capacete|v
+Exceder em mais de 50% a velocidade máxima permitida|v
+Deixar de dar preferência ao pedestre que está atravessando na faixa|v
+Transitar com o veículo sobre a calçada|v
+Dirigir sem usar o cinto de segurança|g
+Exceder de 20% até 50% a velocidade máxima permitida|g
+Exceder até 20% a velocidade máxima permitida|m
+Deixar de sinalizar com a seta a mudança de direção|m
+Parar o veículo sobre a faixa de pedestres na mudança de sinal|m
+Deixar de manter acesa a luz baixa em rodovia durante o dia|m
+Dirigir sem portar a CNH|l
+Dirigir sem portar o documento de licenciamento do veículo|l
+Usar a buzina de forma prolongada ou desnecessária|l`.split('\n').map(l=>l.split('|'));
+function svg(t,g){const T=(s,c,f)=>`<text x="40" y="42" text-anchor="middle" dominant-baseline="central" font-size="${s}" font-weight="700" fill="${c}" font-family="Arial,sans-serif">${f}</text>`,z=g.length>2?20:30;let b;
+if(t=='A')b=`<polygon points="40,3 77,40 40,77 3,40" fill="#ffd400" stroke="#111" stroke-width="4"/>`+T(z,'#111',g);
+else if(t=='S')b=`<polygon points="25,4 55,4 76,25 76,55 55,76 25,76 4,55 4,25" fill="#d00" stroke="#fff" stroke-width="3"/>`+T(18,'#fff',g);
+else if(t=='D')b=`<polygon points="4,10 76,10 40,74" fill="#fff" stroke="#d00" stroke-width="8" stroke-linejoin="round"/>`;
+else if(t=='N')b=`<circle cx="40" cy="40" r="36" fill="#d00"/><rect x="14" y="33" width="52" height="14" fill="#fff"/>`;
+else if(t=='O')b=`<circle cx="40" cy="40" r="36" fill="#0b5fb0"/>`+T(z,'#fff',g);
+else if(t=='I')b=`<rect x="4" y="4" width="72" height="72" rx="6" fill="#0b5fb0" stroke="#fff" stroke-width="3"/>`+T(z,'#fff',g);
+else{b=`<circle cx="40" cy="40" r="34" fill="${t=='E'||t=='B'?'#0b5fb0':'#fff'}" stroke="#d00" stroke-width="7"/>`+(g?T(z,'#111',g):'');
+if(t=='X'||t=='E')b+=`<line x1="17" y1="17" x2="63" y2="63" stroke="#d00" stroke-width="6"/>`;
+if(t=='B')b+=`<path d="M18 18L62 62M62 18L18 62" stroke="#d00" stroke-width="6"/>`}
+return`<svg viewBox="0 0 80 80" role="img" aria-label="Placa de trânsito">${b}</svg>`}
+const grp=t=>'RXEBNOSD'.includes(t)?0:t=='A'?1:2;
+function mk(){const B=Q.slice();
+SG.forEach(([t,n,g])=>{const w=sh(SG.filter(s=>grp(s[0])==grp(t)&&s[1]!=n)).slice(0,3),im=svg(t,g);
+B.push(['A mensagem contida na placa ao lado é:',n,...w.map(s=>s[1]),im]);
+B.push([`Qual placa indica: “${n}”?`,im,...w.map(s=>svg(s[0],s[2]))])});
+IN.forEach(([d,c])=>{const o=Object.keys(NM).filter(k=>k!=c);
+B.push([`A infração “${d}” é classificada como:`,NM[c],...o.map(k=>NM[k])]);
+B.push([`Quantos pontos recebe o condutor que comete a infração “${d}”?`,PT[c]+' pontos',...o.map(k=>PT[k]+' pontos')])});
+return B}
+const fmt=s=>[s/60|0,s%60].map(v=>String(v).padStart(2,'0')).join(':');
+const L='ABCD',MODES=[
+{nome:'Teste rápido',n:10,time:0,fb:1,d:'10 perguntas sorteadas, com a resposta certa logo após cada questão. Sem cronômetro.'},
+{nome:'Simulado com respostas',n:30,time:0,fb:1,d:'30 perguntas sorteadas, com a resposta certa após cada questão. Sem cronômetro.'},
+{nome:'Prova simulada',n:30,time:50,fb:0,d:'30 perguntas sorteadas, 50 minutos e gabarito só no final.'}];
+let S,M;
+function home(){if(S)clearInterval(S.timer);$('#cnt').textContent=$('#tmr').textContent='';app.className='pg';app.innerHTML=`<h1>Escolha como quer praticar</h1><p class="lg">A cada tentativa as questões são sorteadas de um banco de ${mk().length} perguntas, em ordem e com alternativas diferentes.</p><div class="md">${MODES.map((m,i)=>`<button data-i="${i}"><b>${m.nome}</b><span>${m.d}</span></button>`).join('')}</div><p class="lg"><label>Importar mais perguntas (.json): <input type="file" id="im" accept=".json"></label></p>`;
+document.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{M=MODES[b.dataset.i];M.time?login():intro()});$('#im').onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(t=>{try{const a=JSON.parse(t).filter(r=>Array.isArray(r)&&r.length>=5&&r.slice(0,5).every(x=>typeof x=='string'));Q.push(...a);alert(a.length+' perguntas importadas.')}catch(x){alert('Arquivo inválido.')}home()})}}
+function intro(){const min=Math.ceil(M.n*.7);
+app.className='pg';app.innerHTML=`<h1>Simulado DETRAN|ES – ${M.nome}</h1><p>Prepare-se para a prova teórica da CNH com questões sobre legislação, sinalização, direção defensiva, primeiros socorros e meio ambiente.</p><p><b>Recomendações:</b></p><ul><li>A prova tem <b>${M.n} questões</b> de múltipla escolha, sorteadas do banco a cada tentativa.</li><li>Cada questão possui apenas 1 alternativa correta.</li><li>Selecione uma alternativa e clique em “Responder”.</li><li>${M.time?`Tempo de prova: <b>${M.time} minutos</b>.`:'Sem limite de tempo.'}</li><li>${M.fb?'Após responder, a linha da resposta certa fica azul e a errada fica vermelha, com a letra correta indicada.':'O gabarito aparece somente ao final da prova.'}</li><li>Quantidade mínima de acertos para aprovação: <b>${min}</b> (70%).</li><li>Este simulado não substitui a prova oficial do DETRAN|ES.</li></ul>
+<label>Nome do candidato<input id="nm" autocomplete="name" placeholder="Digite seu nome"></label><button class="b g" id="bk">Voltar</button> <button class="b" id="go">Iniciar Simulado</button>`;
+$('#bk').onclick=home;
+$('#go').onclick=()=>begin($('#nm').value.trim()||'Candidato');}
+function begin(nome,tipo,lib){if(lib&&M.time)M=Object.assign({},M,{time:100});S={m:M,nome,tipo,qs:sh(mk()).slice(0,M.n).map(q=>({t:q[0],g:q[5],o:sh(q.slice(1,5).map((x,i)=>({x,c:!i})))})),sel:[],r:[],rev:[],i:0,T:M.time*60,t:M.time*60,fim:0,v:'q'};
+S.el=0;S.timer=setInterval(()=>{S.el++;if(M.time){S.t--;if(S.t<=0){upd();return finish()}}upd()},1000);draw()}
+function cert(){const n=S.qs.length,ac=S.qs.filter((_,k)=>ok(k)).length,min=Math.ceil(n*.7);app.className='pg';
+app.innerHTML=`<div class="ce"><h1>Certificado de Simulado</h1><p>Certificamos que <b>${S.nome.replace(/[<>&]/g,'')}</b> realizou o simulado “${S.m.nome}”${S.tipo?' ('+S.tipo+')':''}, obtendo <b>${ac} de ${n}</b> acertos em ${fmt(S.el)}.</p><p>Resultado: <b>${ac>=min?'APROVADO':'REPROVADO'}</b> (mínimo: ${min}).</p><p class="lg">${new Date().toLocaleString('pt-BR')} · Documento de treino, sem valor oficial.</p></div><div class="row"><button class="b" id="pr">Imprimir / salvar PDF</button><button class="b g" id="b2">Voltar</button></div>`;
+$('#pr').onclick=()=>print();$('#b2').onclick=result}
+function cpfOk(c){c=c.replace(/\D/g,'');if(c.length!=11||/^(\d)\1+$/.test(c))return 0;for(let t=9;t<11;t++){let x=0;for(let i=0;i<t;i++)x+=c[i]*(t+1-i);if((x*10%11)%10!=c[t])return 0}return 1}
+function login(){if(S)clearInterval(S.timer);app.className='';$('#cnt').textContent=$('#tmr').textContent='';
+app.innerHTML=`<div class="lg2"><div class="lh"><span style="font-size:34px">🧑‍💼</span>Entre com seus dados</div><div class="lf"><label for="ln">Nome</label><input type="text" id="ln" autocomplete="name"><label for="lc">CPF</label><input type="text" id="lc" inputmode="numeric" maxlength="14" autocomplete="off"><label for="lt">Tipo de Prova</label><select id="lt"><option>1ª Habilitação</option><option>Reciclagem</option><option>Atualização de CNH</option></select><span></span><label style="text-align:left"><input type="checkbox" id="lb">Prova com Libras</label><button class="ac" id="ac">Acessar</button></div><div style="text-align:center;font-size:13px;padding:8px 14px 0">${M.nome} · ${M.n} questões · ${M.time?'tempo de '+M.time+' min':'sem limite de tempo'} · mínimo de ${Math.ceil(M.n*.7)} acertos</div><div class="er" id="er"></div><div style="text-align:center"><button class="b g" id="bk">Voltar</button></div></div>`;
+$('#lc').oninput=e=>{const d=e.target.value.replace(/\D/g,'').slice(0,11);e.target.value=d.replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2')};
+$('#bk').onclick=home;
+$('#ac').onclick=()=>{const n=$('#ln').value.trim(),e=$('#er');if(!n)return e.textContent='Informe o nome';if(!cpfOk($('#lc').value))return e.textContent='CPF Inválido';begin(n,$('#lt').value,$('#lb').checked)}}
+const cur=i=>S.sel[i]!=null?S.sel[i]:S.r[i],ok=i=>S.r[i]!=null&&S.qs[i].o[S.r[i]].c;
+function upd(){$('#cnt').textContent=S.fim?'':`${S.tipo?S.tipo+' · ':''}Perguntas respondidas: ${S.r.filter(v=>v!=null).length} de ${S.qs.length}`;$('#tmr').textContent=S.fim?'':'⏱ '+fmt(S.m.time?S.t:S.el);$('#tmr').style.color=S.m.time&&S.t<300?'#c00':''}
+function nxt(){const n=S.qs.length;for(let d=1;d<n;d++){const k=(S.i+d)%n;if(S.r[k]==null){S.i=k;S.v='q';return draw()}}S.v='sum';draw()}
+function draw(){if(S.v=='sum')return summary();upd();app.className='';
+const i=S.i,q=S.qs[i],n=S.qs.length,lk=S.fim||(S.m.fb&&S.r[i]!=null),c=q.o.findIndex(o=>o.c),v=cur(i);
+const fb=lk?`<p><b>${S.r[i]==null?'Sem resposta.':ok(i)?'Você acertou!':'Você errou.'}</b><br>Resposta correta: alternativa ${c+1} (letra ${L[c]}).</p>`:'';
+app.innerHTML=`<div class="qc"><div class="qt">Questão nº ${i+1} - ${q.t}</div>${q.g?`<div class="sg">${q.g}</div>`:''}</div>
+<div class="bt"><div><div class="hd">Escolha uma das alternativas abaixo.</div>${q.o.map((o,k)=>{let cl='ro';if(lk){if(o.c)cl+=' ok';else if(S.r[i]===k)cl+=' bad'}else if(v===k)cl+=' on';
+return`<div class="${cl}" data-k="${k}" tabindex="0" role="radio" aria-checked="${v===k}"><span class="nb">${k+1}</span><span class="tx">${o.x}</span></div>`}).join('')}</div>
+<div class="sd">${fb}${S.fim?`<button class="pl" id="pv" ${i?'':'disabled'}>Anterior</button><button class="cf" id="nx" ${i<n-1?'':'disabled'}>Próxima</button><button class="pl" id="rs">Ver resultado</button>`:lk?`<button class="cf" id="nx">Próxima questão</button>`:`<p>${v==null?'Escolha uma alternativa.':`Você respondeu a alternativa ${v+1}. Deseja prosseguir?`}</p><button class="cf" id="cf" ${v==null?'disabled':''}>Confirmar</button><button class="pl" id="pl">Pular questão</button>`}</div></div>`;
+const g=(s,f)=>{const e=$(s);if(e)e.onclick=f};
+const pick=e=>{if(!lk){S.sel[i]=+e.dataset.k;draw()}};
+document.querySelectorAll('.ro').forEach(e=>{e.onclick=()=>pick(e);e.onkeydown=ev=>{if(ev.key==' '||ev.key=='Enter'){ev.preventDefault();pick(e)}}});
+g('#cf',()=>{S.r[i]=v;delete S.sel[i];S.rev[i]=0;S.m.fb?draw():nxt()});
+g('#pl',()=>{S.rev[i]=1;nxt()});
+g('#nx',()=>{if(S.fim){S.i++;draw()}else nxt()});
+g('#pv',()=>{S.i--;draw()});g('#rs',result)}
+function summary(){const n=S.qs.length,f=S.qs.map((_,k)=>k).filter(k=>S.r[k]==null);upd();app.className='pg';
+app.innerHTML=`<h1>Resumo da prova</h1><p>Respondidas: <b>${n-f.length}</b> de ${n}.${f.length?` Sem resposta: questão(ões) ${f.map(k=>k+1).join(', ')}.`:''}</p><div class="row">${f.length?'<button class="b g" id="bq">Voltar às questões sem resposta</button>':''}<button class="b" id="fn">Finalizar prova</button></div>`;
+const b=$('#bq');if(b)b.onclick=()=>{S.i=f[0];S.v='q';draw()};
+$('#fn').onclick=()=>{if(!f.length||confirm(`Ainda há ${f.length} questão(ões) sem resposta. Deseja finalizar mesmo assim?`))finish()}}
+function finish(){clearInterval(S.timer);S.fim=1;S.v='q';upd();result()}
+function result(){const n=S.qs.length,ac=S.qs.filter((_,k)=>ok(k)).length,min=Math.ceil(n*.7),p=ac>=min,br=S.qs.filter((_,k)=>S.r[k]==null).length;
+app.className='pg';app.innerHTML=`<div class="res"><p class="lg">${S.nome.replace(/[<>&]/g,'')}${S.tipo?' · '+S.tipo:''}</p><div class="n">${ac}/${n}</div><h1 style="color:var(${p?'--bl':'--rd'})">${p?'APROVADO':'REPROVADO'}</h1><p>${p?'Você atingiu o mínimo de '+min+' acertos.':'Mínimo exigido: '+min+' acertos. Revise o conteúdo e tente novamente.'}<br>Erros: ${n-ac-br} · Em branco: ${br} · Tempo: ${fmt(S.el)}</p>
+<button class="b" id="rv">Revisar questões</button> <button class="b g" id="ct">Certificado</button> <button class="b g" id="rt">Voltar ao início</button></div>`;
+$('#rv').onclick=()=>{S.i=0;draw()};$('#rt').onclick=home;$('#ct').onclick=cert}
+home();
+</script>
+</body>
+</html>
