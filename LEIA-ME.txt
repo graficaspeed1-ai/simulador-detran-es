@@ -1,0 +1,17 @@
+GERAR O APK SEM INSTALAR NADA NO SEU COMPUTADOR (GitHub Actions, gratuito)
+
+1. Crie uma conta em github.com e um repositório novo (botão "New").
+2. No repositório: Add file > Upload files. Arraste TODO o conteúdo desta pasta,
+   incluindo a pasta oculta ".github". Se ela não subir, use Add file > Create new file,
+   digite o caminho  .github/workflows/build-apk.yml  e cole o conteúdo do arquivo.
+3. Clique em Commit changes. Abra a aba "Actions": o job "Build APK" roda sozinho (3 a 6 minutos).
+   Se não rodar, clique em Build APK > Run workflow.
+4. Quando ficar verde, abra a execução e baixe "simulado-detran-es-apk" em Artifacts.
+   Dentro do zip está o app-debug.apk.
+5. Envie o APK ao celular e instale (permita "instalar apps de fontes desconhecidas").
+
+OBSERVAÇÕES
+- O APK é assinado com chave de teste (debug): serve para instalar no seu aparelho.
+  Para a Play Store é preciso um build release assinado.
+- O app roda offline. No APK, o botão de importar arquivo .json e o de imprimir certificado não funcionam.
+- Para atualizar o app, substitua app/src/main/assets/index.html e envie de novo.
